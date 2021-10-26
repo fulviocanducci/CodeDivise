@@ -23,7 +23,7 @@ namespace CodeDivise.Models
         public void Run()
         {
             Portions.Clear();
-            decimal portion = Round(Difference / Divise, 2);
+            decimal portion = Round(Difference / Divise, 2, System.MidpointRounding.ToZero);
             decimal sumPortion = portion * Divise;
             Portions.Add(portion, Divise);
             decimal rest = Difference - sumPortion;
